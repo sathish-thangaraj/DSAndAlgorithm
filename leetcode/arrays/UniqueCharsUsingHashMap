@@ -1,0 +1,36 @@
+import java.util.HashMap;
+import java.util.HashSet;
+
+public class UniqueCharsUsingHashMap {
+    public static void main(String[] args) {
+        String s = "abcdefghijklmnopqrstuvwxyz";
+        System.out.println(isUniqueCharsSet(s));
+    }
+    /*
+     This method uses hashmap to find the unique chars
+     */
+    public static boolean isUniqueChars(String input) {
+        HashMap<Character, Integer> char_map = new HashMap<Character, Integer>();
+        for (char c : input.toCharArray()) {
+            if (char_map.containsKey(c)) {
+                return false;
+            } else {
+                char_map.put(c, 1);
+            }
+        }
+        return true;
+    }
+
+    /*
+    This method uses hash set to find the unique chars
+    */
+    public static boolean isUniqueCharsSet(String input) {
+        HashSet char_set = new HashSet();
+        for (char c : input.toCharArray()) {
+            if (!char_set.add(c)) {
+                return false;
+            }
+        }
+        return true;
+    }
+}
