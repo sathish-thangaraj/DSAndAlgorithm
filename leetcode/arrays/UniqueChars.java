@@ -17,8 +17,6 @@ public class UniqueChars {
         boolean[] char_set = new boolean[128] ;
         for(int i=0 ; i<input.length() ; i++){
             int val = input.charAt(i);
-            int val1 = '2' ;
-            System.out.println(val1);
             if(char_set[val]){
                 return false;
             }
