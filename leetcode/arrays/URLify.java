@@ -25,7 +25,6 @@ public class URLify {
         }
 
         for(int i=trueLength-1 ; i >=0 ; i--){
-            System.out.println("i th " + input[i]);
             if(input[i] == ' '){
                 input[finalLength-1] = '0' ;
                 input[finalLength-2] = '2' ;
